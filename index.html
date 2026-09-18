@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css"/>
     <title>Weather App</title>
 </head>
-<body id="container">
+<body>
+<div class="container">
 
-<header id="container-form">
+<header>
 <form id="search-form">
     <input type="search" placeholder="Enter a city..." id="search-city"/>
     <input type="submit" value="search" id="search-button"/>
 </form>
 </header>
-
  <main>
-    <div>
- <h1>Welcome to my Weather App</h1>
+ <h1 id="heading">London</h1>
+ <div id="paragraph">Thursday 17th September, 14:50 </div>
+<br />
 
- <p>
-    Tuesday 14:50, scattered clouds <br />
-    Humidity: 87%, Wind: 3.1km/h
- </p></div>
-
- <div>
- <img src="weather-sun-clouds-rain.png" alt="rainy weather" width="30"/> 15°C <br />
+<div class="container-info">
+<span id="icon">⛅</span>
+<span id="temp">15 </span>
+<span id="degree">°C</span> 
 </div>
+ 
+<div id="condition">scattered clouds</div> 
+
+  <table><div class="table">
+    <tr>
+        <th>Humidity</th>
+        <th>WindSpeed</th>   
+    </tr>
+
+    <tr>
+        <td><span id="humidity">💧 87%</span></td>
+        <td><span id="wind"><img src="wind.png" alt="wind" width="28"/> 3.1km/h</span> </td>
+    </tr>
+   </div></table>
+    
 </main>
 
  <footer>Built by 
@@ -34,5 +50,6 @@
     <a href= "https://github.com/sandye604x/WeatherApp" target="_blank">Git Hub</a> and 
     <a href= "https://seweatherapp.netlify.app/" target="_blank">hosted on Netlify</a>
 </footer>
+</div>
 </body>
 </html>
