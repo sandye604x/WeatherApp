@@ -26,7 +26,7 @@ let searchform = document.querySelector("#search-form");
 searchform.addEventListener("Submit", searchCity);
 
 
-function formatDate(daytime) {
+function formatDate(now) {
 let days = ["Sunday",
     "Monday",
     "Tuesday",
@@ -53,8 +53,7 @@ if (minutes < 10) {
 }
 let time = `${hours}:${minutes}`;
 
-let display = `${day} ${date} ${month}, ${time}`;
-return display(daytime);
+return `${day} ${date} ${month}, ${time}`;
 }
 
 let currentdisplay = document.querySelector("#paragraph");
