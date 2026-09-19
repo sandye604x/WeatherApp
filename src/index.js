@@ -5,6 +5,23 @@ temp.innerHTML = `${temperature}`;
 
 let cityElement = document.querySelector("#heading"); 
 cityElement.innerHTML= response.data.city;
+
+let conditionElement = document.querySelector("#condition");
+conditionElement.innerHTML = response.data.condition.description;
+
+let iconElement = document.querySelector("#icon");
+iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
+
+let humidityElement = document.querySelector("#humidity");
+humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+let windElement = document.querySelector("#wind");
+windElement.innerHTML = `${response.data.wind.speed}km/h`;
+
+let currentdisplay = document.querySelector("#paragraph");
+let now = new Date(response.data.time * 1000);
+
+currentdisplay.innerHTML = formatDate(now);
 }
 
 
@@ -12,7 +29,6 @@ function searchCity(event) {
  event.preventDefault();
 
  let searchcityElement = document.querySelector("#search-city");
- //let searchcity = document.querySelector("#heading");
  let city = searchcityElement.value;
 
  let apikey = "4932054o633942b306c5da4cf004ctf8";
@@ -35,7 +51,7 @@ let days = ["Sunday",
 ];
 let day = days[currentdaytime.getDay()];
 
-let months = ["March", "April", "May","June", "July", "August", "September", "October", "November", "December", "January", "February"];
+let months = [ "January", "February", "March", "April", "May","June", "July", "August", "September", "October", "November", "December"];
 let month = months[currentdaytime.getMonth()];
 
 let date = currentdaytime.getDate();
@@ -54,7 +70,3 @@ let time = `${hours}:${minutes}`;
 return `${day} ${date} ${month}, ${time}`;
 }
 
-let currentdisplay = document.querySelector("#paragraph");
-let now = new Date();
-
-currentdisplay.innerHTML = formatDate(now);

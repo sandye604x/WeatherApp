@@ -9,7 +9,7 @@ background-color:#f9f7fe;
 
 
 main #paragraph {
-margin-bottom:20px;
+margin-bottom:5px;
   color:rgba(0,0,0,0.6);
 }
 
@@ -50,21 +50,20 @@ footer a {
 #temp {
   font-size:75px;
   font-weight: bolder;
-  position:relative;
-  top:30px;
-  left: 220px;
+  position:absolute;
+  top:270px;
+  left: 720px;
 
 }
 
 #icon {
-  font-size: 50px;
-  margin:0 0 15px 10px;
+ margin:0 0 30px 10px;
 }
 
 #degree {
-  position:relative;
-  top:40px;
-  left: 220px;
+  position:absolute;
+  top:280px;
+  right: 455px;
 }
 
 .table {
@@ -76,19 +75,18 @@ footer a {
 
 #condition {
   text-align:left;
-  margin:15px 0 10px 10px;
+  margin:30px 0 10px 10px;
   color:rgba(0,0,0,0.6); 
 }
 
 #humidity {
   margin:0 10px 0 0;
   color:rgba(0,0,0,0.6);
-  font-size:19px;
+  
 }
 
 #wind {
     color:rgba(0,0,0,0.6);
-    font-size: 17px;
 }
 
 #search-city {
