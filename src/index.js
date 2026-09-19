@@ -3,10 +3,8 @@ let temp = document.querySelector("#temp");
 let temperature = Math.round(response.data.temperature.current);
 temp.innerHTML = `${temperature}`;
 
-let cityElement = document.querySelector("#heading");
-let city = response.data.city;
-cityElement.innerHTML= `${city}`;
-
+let cityElement = document.querySelector("#heading"); 
+cityElement.innerHTML= response.data.city;
 }
 
 
@@ -14,19 +12,19 @@ function searchCity(event) {
  event.preventDefault();
 
  let searchcityElement = document.querySelector("#search-city");
- let heading = document.querySelector("#heading");
- heading.innerHTML= searchcityElement.value;
+ //let searchcity = document.querySelector("#heading");
+ let city = searchcityElement.value;
 
  let apikey = "4932054o633942b306c5da4cf004ctf8";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}`;
+ let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}`;
 axios.get(apiUrl).then(displayTemperature);
 }
 
 let searchform = document.querySelector("#search-form");
-searchform.addEventListener("Submit", searchCity);
+searchform.addEventListener("submit", searchCity);
 
 
-function formatDate(now) {
+function formatDate(currentdaytime) {
 let days = ["Sunday",
     "Monday",
     "Tuesday",
@@ -35,14 +33,14 @@ let days = ["Sunday",
     "Friday",
     "Saturday",
 ];
-let day = days[now.getDay()];
+let day = days[currentdaytime.getDay()];
 
 let months = ["March", "April", "May","June", "July", "August", "September", "October", "November", "December", "January", "February"];
-let month = months[now.getMonth()];
+let month = months[currentdaytime.getMonth()];
 
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
+let date = currentdaytime.getDate();
+let hours = currentdaytime.getHours();
+let minutes = currentdaytime.getMinutes();
 
 if (hours < 10) {
     `0${hours}`;
@@ -59,4 +57,4 @@ return `${day} ${date} ${month}, ${time}`;
 let currentdisplay = document.querySelector("#paragraph");
 let now = new Date();
 
-currentdisplay.innerHTML = formatDate(currentdaytime);
+currentdisplay.innerHTML = formatDate(now);
