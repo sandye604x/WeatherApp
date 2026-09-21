@@ -50,19 +50,20 @@ footer a {
 #temp {
   font-size:75px;
   font-weight: bolder;
-  position:absolute;
+  position:fixed;
   top:260px;
-  left: 560px;
+  left:560px;
 }
 
 #icon {
- margin:0 0 30px 10px;
+ margin:0 0 40px 10px;
+
 }
 
 #degree {
-  position:absolute;
+  position:fixed;
   top:270px;
-  right: 300px;
+  right:290px;
 }
 
 .table {
@@ -74,14 +75,13 @@ footer a {
 
 #condition {
   text-align:left;
-  margin:30px 0 10px 15px;
+  margin:35px 0 10px 23px;
   color:rgba(0,0,0,0.6); 
 }
 
 #humidity {
   margin:0 10px 0 0;
-  color:rgba(0,0,0,0.6);
-  
+  color:rgba(0,0,0,0.6); 
 }
 
 #wind {
@@ -109,11 +109,11 @@ footer a {
 
 .weather-forecast {
   margin-top: 25px;
+  display:flex;
+justify-content:space-between;
 }
 
 .weather-forecast-day {
-  display:flex;
-  justify-content:space-between;
 margin-bottom:40px;
 
 }
@@ -123,6 +123,11 @@ margin-bottom:40px;
   color:rgba(0,0,0,0.6);  
 }
 
+.weather-forecast-icon {
+  display:block;
+  margin: 0 auto; 
+}
+
 .weather-forecast-temperature{
   display: flex;
   justify-content:center;
@@ -130,7 +135,7 @@ margin-bottom:40px;
   color: #f65282;
 }
 
-.weather-forecast-temp-min {
+.weather-forecast-temp-max {
    padding:0 10px 0 0;
    font-weight:bold;
 }
